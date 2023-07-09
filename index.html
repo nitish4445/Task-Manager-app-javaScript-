@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles2.css" />
+    <title>Draggable Todo App</title>
+  </head>
+  <body>
+    <!-- modal -->
+   <div class="modal" id="todo_form">
+      <div class="header">
+        <div class="title">Add Task</div>
+        <b utton class="btn close-modal">&times;</b>
+      </div>
+      <div class="body">
+       <form action="">
+        <label>Enter Task</label>
+        <input type="text" class="todo_inputs" required/>
+        <label>Discription</label>
+        <input type="text" class="todo_inputs">
+        <input type="submit" value="ADD TASK" id="todo_submit"/>
+       </form>
+      </div>
+    </div>
+    <!-- todo -->
+    <div class="todo-container">
+      <div class="status" id="no_status">
+        <p id="inopen">Open</p>
+        <hr>
+        <button id="add_btn" data-target-modal="#todo_form">Create Task</button>
+      </div>
+      <div class="status">
+        <p id="inprocess">In Progress</p>
+        
+      </div>
+      <div class="status">
+        <p id="Inreview">In Review</p>
+        <hr>
+      </div>
+      <div class="status">
+        <p id="indone">Done</p>
+        <hr>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="./App.js"></script>
+  </body>
+</html>
