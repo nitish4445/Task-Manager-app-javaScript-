@@ -7,6 +7,15 @@ body{
     background-color: #BC96CA;
     font-family: 'Times New Roman', Times, serif;
 }
+#manuBar{
+  display: none;
+}
+#closeBar{
+  display: none;
+}
+#sideBar{
+  display: none;
+}
 #main-navContainer{
   display: flex;
   background-color: #ca3c3c;
@@ -21,22 +30,26 @@ body{
   margin-left: 10px;
   border-radius: 50%;
 }
+#ulTag{
+  display: flex;
+}
 #main-navContainer #ulTag li{
   margin: 50px;
   list-style: none;
-  float: left;
+  /* float: left; */
 }
 #main-navContainer #ulTag li a{
   text-decoration: none;
   color: whitesmoke;
   font-weight: 900;
   font-size: large;
+  height: 100%;
 }
-#main-navContainer #ulTag li a:hover{
-  /* background-color: #BC96CA; */
+li a:hover{
+  background-color: #BC96CA;
   display: inline-block;
-  transform: scale(1.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* transform: scale(1.2);
+  transition: transform 0.3s ease, background-color 0.3s ease; */
 }
 .todo-container{
     height: 100%;
@@ -228,4 +241,35 @@ body{
     .todo-container{
         flex-wrap: wrap;
     }
+}
+@media(max-width:560px){
+  #ulTag{
+    display: none;
+    flex-direction: column;
+    align-items: flex-;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ca3c3c;
+    width: 200px;
+    height: 800px;
+    /* height: auto; */
+    box-shadow: -5px 0px 5px gray;
+  }
+  .nav a{
+    /* background-color: yellow;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    height: auto;
+  }
+  #manuBar,#closeBar{
+    display: block;
+  }
+  #closeBar{
+    margin-left: 125px;
+    z-index: 1;
+  }
+  #sideBar:checked~ #ulTag{
+    display: flex;
+  }
 }
