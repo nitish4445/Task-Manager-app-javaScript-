@@ -7,11 +7,21 @@
     <title>Draggable Todo App</title>
   </head>
   <body>
+    <!-- Navigation Bar -->
+     <div id="main-navContainer">
+      <img src="./image/task-manager-app-logo.jpg" alt="logo" width="50px" height="50px">
+      <ul id="ulTag">
+        <li><a href="" class="nav">Task</a></li>
+        <li><a href="" class="nav">About</a></li> 
+        <li><a href="" class="nav">Home</a></li>
+        <li><a href="" class="nav">Contain</a></li>   
+      </ul>
+     </div>
     <!-- modal -->
    <div class="modal" id="todo_form">
       <div class="header">
         <div class="title">Add Task</div>
-        <b utton class="btn close-modal">&times;</b>
+        <button class="btn close-modal">&times;</button>
       </div>
       <div class="body">
        <form action="">
@@ -32,7 +42,7 @@
       </div>
       <div class="status">
         <p id="inprocess">In Progress</p>
-        
+        <hr>
       </div>
       <div class="status">
         <p id="Inreview">In Review</p>
