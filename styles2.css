@@ -7,11 +7,10 @@ body{
     background-color: #BC96CA;
     font-family: 'Times New Roman', Times, serif;
 }
-#manuBar{
+#manuBar,#closeBar{
   display: none;
-}
-#closeBar{
-  display: none;
+  color: #f0f0f0;
+  font-size: xx-large;
 }
 #sideBar{
   display: none;
@@ -33,21 +32,18 @@ body{
 #ulTag{
   display: flex;
 }
-#main-navContainer #ulTag li{
-  margin: 50px;
-  list-style: none;
-  /* float: left; */
-}
-#main-navContainer #ulTag li a{
+#main-navContainer #ulTag a{
   text-decoration: none;
+  padding: 20px;
   color: whitesmoke;
   font-weight: 900;
   font-size: large;
   height: 100%;
 }
-li a:hover{
+a:hover{
   background-color: #BC96CA;
   display: inline-block;
+  width: 100%;
   /* transform: scale(1.2);
   transition: transform 0.3s ease, background-color 0.3s ease; */
 }
@@ -244,32 +240,52 @@ li a:hover{
 }
 @media(max-width:560px){
   #ulTag{
-    display: none;
+    /* display: none; */
     flex-direction: column;
-    align-items: flex-;
+    align-items: flex-start;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     background-color: #ca3c3c;
     width: 200px;
-    height: 800px;
+    /* height: 800px;  */
     /* height: auto; */
     box-shadow: -5px 0px 5px gray;
+    transition: 1s ease-out;
   }
   .nav a{
     /* background-color: yellow;
     /* padding: 20px; */
     box-sizing: border-box;
     height: auto;
+    width: 100%;
   }
   #manuBar,#closeBar{
     display: block;
+    padding: 20px;
+    cursor: pointer;
   }
   #closeBar{
-    margin-left: 125px;
+    /* margin-left: 125px; */
     z-index: 1;
   }
   #sideBar:checked~ #ulTag{
+    /* display: flex; */
+    right: 0;
+
+  }
+  #sideBar:checked~#overlay{
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  #just{
+    height: 493px;
+    background-color: #ca3c3c;
   }
 }
